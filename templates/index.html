@@ -1,0 +1,103 @@
+{% extends 'base.html'%}
+
+
+{% block head%} 
+
+{% endblock %}
+
+{% block body%} 
+ <div class="login">
+    <h1>Enter Your Data</h1>
+
+    <form action="{{url_for('predict')}}"method="post">
+        
+        <h3 style="display: inline;">Age</h3>
+        <input type="text" name="Age" placeholder="..." required="required" style="width: 3%; font-size: small; height: 25px; text-align: center;"/>
+        <br>
+        <br>
+
+        <h3 style="display: inline;">Gender</h3>
+        <input type="radio" name="Gender" id="male" value=0 style="height: 20px; width: 20px;"/><label for="male" style="font-size: larger;" class="label">Male</label>
+        <input type="radio" id="female" name="Gender" value=1 style="height: 20px; width: 20px;"/> <label for="female" style="font-size: larger;">Female</label>
+        <br>
+        
+        <br>
+        <h3 style="display: inline;">Chest Pain</h3>
+        <input type="radio" id="CP0" name="cp" value=0 style="height: 20px; width: 20px;"/> <label for="CP0" style="font-size: larger;">Typical Angina</label> 
+        <input type="radio" id="CP1" name="cp" value=1 style="height: 20px; width: 20px;"/> <label for="CP1" style="font-size: larger;">Atypical Angina </label>
+        <input type="radio" id="CP2" name="cp" value=2 style="height: 20px; width: 20px;"/> <label for="CP2" style="font-size: larger;">Non-Anginal Pain</label>
+        <input type="radio" id="CP3" name="cp" value=3 style="height: 20px; width: 20px;"/> <label for="CP3" style="font-size: larger;">Asymptomatic</label> 
+        <br>
+
+        <br>
+        <h3 style="display: inline;">Resting BP</h3>
+        <input type="text" name="RBP" placeholder="..." required="required" style="width: 3%; font-size: small; height: 25px;text-align: center;"/>
+        <br>
+        <br>
+        <h3 style="display: inline;">Cholesterol Level</h3>
+        <input type="text" name="chol" placeholder="..." required="required" style="width: 3%; font-size: small; height: 25px;text-align: center;"/>
+        <br>
+        <br>
+        
+        <h3 style="display: inline;">Fasting Blood Sugar</h3>
+        <input type="hidden" name="fbs" value="0">
+        <input type="checkbox" name="fbs"  value=1 style="height: 25px; width: 25px;"/>
+        <br>
+        <br>
+
+        <h3 style="display: inline;">ECG</h3>
+        <input type="radio" id="ecg0" name="ecg" value=0 style="height: 20px; width: 20px;"/> <label for="ecg0" style="font-size: larger;">Normal</label> 
+        <input type="radio" id="ecg1" name="ecg" value=1 style="height: 20px; width: 20px;"/> <label for="ecg1" style="font-size: larger;">Having ST-T wave abnormality</label>
+        <input type="radio" id="ecg2" name="ecg" value=2 style="height: 20px; width: 20px;"/> <label for="ecg2" style="font-size: larger;">Showing hypertrophy</label>
+        <br>
+        <br>
+
+        <h3 style="display: inline;">Max Heart Rate achieved</h3>
+        <input type="text" name="thalach" placeholder="..." required="required" style="width: 3%; font-size: small; height: 25px; text-align: center;"/>
+        <br>
+        <br>
+
+
+        <h3 style="display: inline;">Exercise Induced Angina</h3>
+        <input type="radio" id="yes" name="exang" value=1 style="height: 20px; width: 20px;"/> <label for="yes" style="font-size: larger;">Yes</label>
+        <input type="radio" name="exang" id="no" value=0 style="height: 20px; width: 20px;"/><label for="no" style="font-size: larger;">No</label>
+        <br>
+        <br>
+
+        <h3 style="display: inline;">Old Peak</h3>
+        <input type="text" name="oldpeak" placeholder="..." required="required" style="width: 3%; font-size: small; height: 25px; text-align: center;"/>
+        <br>
+        <br>
+
+        <h3 style="display: inline;">Slope</h3>
+        <input type="radio" id="slp0" name="slp" value=0 style="height: 20px; width: 20px;"/> <label for="slp0" style="font-size: larger;">Downsloping</label> 
+        <input type="radio" id="slp1" name="slp" value=1 style="height: 20px; width: 20px;"/> <label for="slp1" style="font-size: larger;">Flat</label>
+        <input type="radio" id="slp2" name="slp" value=2 style="height: 20px; width: 20px;"/> <label for="slp2" style="font-size: larger;">Upsloping</label>
+        <br>
+        <br>
+
+        <h3 style="display: inline;">Fluorosopy Result</h3>
+        <input type="radio" id="fl0" name="fl" value=0 style="height: 20px; width: 20px;"/> <label for="fl0" style="font-size: larger;">0</label> 
+        <input type="radio" id="fl1" name="fl" value=1 style="height: 20px; width: 20px;"/> <label for="fl1" style="font-size: larger;">1</label>
+        <input type="radio" id="fl2" name="fl" value=2 style="height: 20px; width: 20px;"/> <label for="fl2" style="font-size: larger;">2</label>
+        <input type="radio" id="fl3" name="fl" value=3 style="height: 20px; width: 20px;"/> <label for="fl3" style="font-size: larger;">3</label>
+        <br>
+        <br>
+
+        <h3 style="display: inline;">Thallium Stress Test Result</h3>
+        <input type="radio" id="tst0" name="tst" value=1 style="height: 20px; width: 20px;"/> <label for="tst0" style="font-size: larger;">Fixed Flow</label> 
+        <input type="radio" id="tst1" name="tst" value=2 style="height: 20px; width: 20px;"/> <label for="tst1" style="font-size: larger;">Normal</label>
+        <input type="radio" id="tst2" name="tst" value=3 style="height: 20px; width: 20px;"/> <label for="tst2" style="font-size: larger;">Reversable Defect</label>
+        <br>
+        <br>
+
+        <button type="submit" class="btn">Predict</button>
+    </form>
+    <br>
+    <br>
+    <div class="result">
+        <h2 class="res">{{ prediction_text }}</h2>
+    </div>
+    
+ </div>
+{% endblock %}

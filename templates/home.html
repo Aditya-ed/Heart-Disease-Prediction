@@ -1,0 +1,93 @@
+<head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/home.css') }}">
+    
+</head>
+    
+<body>
+    <div style="background-color:darkred" class="heading" hover="font-size: x-large">
+        <h1 style="color: wheat;" class="H1">Heart Disease Predictor</h1>
+    </div>
+    <p style="text-align: center; font-size: x-large;" class="para" >This predictor makes use of the data provided by the user to make predictions whether the user has Heart Disease or not</p>
+    <div  class="body">
+        <h2>Data Requirments of the Model:</h2>
+        
+        <h2 style="display:inline;">Age: </h2> 
+        <p style="display: inline;">With increasing age the chances of heart disease increases</p>
+        <br>
+        <br>
+        
+        <h2 style="display: inline;">Sex: </h2>
+        <p style="display: inline;">1 for male and 0 for female</p>
+        <br>
+        <br>
+        
+        <h2 style="display: inline;">Chest Pain: </h2>
+        <p style="display: inline;">Typical Angina, Atypical Angina, Non-Anginal pain and Asymptomatic</p>
+        <br>
+        <br>
+        
+        <h2 style="display: inline;">Resting Blood Pressure:</h2>
+        <p style="display: inline;">Ideal Blood Pressure is considered to be between 90/60mmHg and 120/80mmHg.</p>
+        <br>
+        <br>
+        
+        <h2 style="display: inline;">Serum Cholesterol: </h2>
+        <p style="display: inline;">It represents the amount of total Cholesterol present in their blood</p>
+        <br>
+        <br>
+        
+        <h2 style="display: inline;">Fasting Blood Sugar: </h2>
+        <p style="display: inline;">It indicates to the level of sugar in your blood. The model askes whether the fasting blood sugar level is greater than 120mg/dL </p>
+        <br>
+        <br>
+
+        <h2 style="display: inline;">Resting Electrocardiographic Result: </h2>
+        <p style="display: inline;">also known as ECG. It takes 3 values: <br>
+            0: Normal <br>
+            1: Having ST-T wave abnormality <br>
+            2: Showing probable or definite left ventricular hypertrophy</p>
+        <br>
+        <br>
+        
+        <h2 style="display: inline;">Max Heart Rate Achieved: </h2>
+        <p style="display: inline;">It represents the Max heart rate achieved during the stress-test</p>
+        <br>
+        <br>
+        
+        <h2 style="display: inline;">Exercise Induced Angina: </h2>
+        <p style="display: inline;">Angina is chest pain caused by reduced blood flow to the heart muscles. Exercise and stress can also cause angina. A person should seek medical attention if it happens.</p>
+        <br>
+        <br>
+        
+        <h2 style="display: inline;">Oldpeak:  </h2>
+        <p style="display: inline;">ST depression induced by exercise relative to rest</p>
+        <br>
+        <br>
+        
+        <h2 style="display: inline;">Slope of ST segment: </h2>
+        <p style="display: inline;">Slope of peak exercise ST segment. It has 3 values: <br>
+        0: Upsloping <br>
+        1: Flat <br>
+        2: Downsloping 
+        </p>
+        <br>
+        <br>
+        
+        <h2 style="display: inline;">Fluorosopy: </h2>
+        <p style="display: inline;">It gives number of major vessels colored by flourosopy</p>
+        <br>
+        <br>
+        
+        <h2 style="display: inline;">Thallium Stress Test Result: </h2>
+        <p style="display: inline;">It gives information about how well the blood flows through your heart. <br>
+            1: Fixed Defect(no flow in some part) <br>2: Normal Flow <br>3: reversable defect(blood flow detected but it is not normal)
+        </p>
+        <br>
+        <br>
+        
+    </div>
+    <a href="/menu" style="text-decoration: none;">
+        <button class="btn">Continue</button>
+    </a>
+
+</body>
