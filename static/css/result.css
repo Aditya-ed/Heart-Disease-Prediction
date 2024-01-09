@@ -1,0 +1,73 @@
+body{
+    background-color: wheat;
+    margin:0;
+
+}
+.h1
+{margin: 0;
+background-color: darkred;
+transition: all 0.5s;
+animation: slide 1s;}
+
+@keyframes slide {
+    from{
+        transform: translateY(-100px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+    
+}
+.h1:hover{
+    transform: translateY(-10px);
+    color: wheat;
+}
+
+.d1{
+    background-color: darkred;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding: 5%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    
+}
+.d2{
+    transition: all 0.5s;
+    animation: appear 3s;
+font-size: 125%;}
+
+@keyframes appear {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+.d2:hover{
+    transform: translateY(-10px);
+}
+
+@keyframes slide2 {
+    from{
+        transform: translateY(500%);
+    }
+    to{
+        transform: translateY(0px);
+    }
+    
+}
+.btn{
+    transition: all 0.5s;
+    font-size: large;
+    font-weight: 1000;
+    color: black;
+    border: 8px  solid black;
+    border-radius: 25px;
+    padding: 0.7em 0.9em;
+    animation: slide2 1s;
+}
+.btn:hover
+{
+    transform: translateY(-10px);
+    color: white;
+    background-color: black;
+}

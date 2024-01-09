@@ -24,7 +24,7 @@ def predict():
     else :
         text="you have the symptoms of having Heart Disease. Please consult a Doctor."
     #print(int_features)
-    return render_template('index.html',prediction_text='The model predicted  {}'.format(text))
+    return render_template('result.html',prediction_text='The model predicted  {}'.format(text))
 
 
 if __name__ == "__main__":

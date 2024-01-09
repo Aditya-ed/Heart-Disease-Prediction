@@ -7,8 +7,10 @@
 
 {% block body%} 
  <div class="login">
-    <h1>Enter Your Data</h1>
-
+    <div class="result">
+        <h2 class="res">Enter Your Data</h2>
+    </div>
+    <br>
     <form action="{{url_for('predict')}}"method="post">
         
         <h3 style="display: inline;">Age</h3>
@@ -95,9 +97,7 @@
     </form>
     <br>
     <br>
-    <div class="result">
-        <h2 class="res">{{ prediction_text }}</h2>
-    </div>
+    
     
  </div>
 {% endblock %}
